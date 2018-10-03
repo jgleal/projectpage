@@ -78,7 +78,7 @@ a:focus {
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #7386D5;
+  background: rgb(75, 145, 79);
   color: #fff;
   transition: all 0.3s;
 }
@@ -100,7 +100,7 @@ a:focus {
 }
 
 #sidebar .sidebar-footer img {
-  width: 70%;
+  width: 90%;
 }
 
 #sidebar ul p {
@@ -115,14 +115,14 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-  color: #7386D5;
+  color:rgb(75, 145, 79);
   background: #fff;
 }
 
 #sidebar ul ul a {
   font-size: 0.9em;
   padding-left: 30px;
-  background: #6d7fcc;
+  background: rgba(146, 187, 150, 0.562);
 }
 
 /* ---------------------------------------------------
