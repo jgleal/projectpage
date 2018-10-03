@@ -31,21 +31,22 @@ a:focus {
   padding-left: 10px;
 }
 
-#btnMenu, #btnGithub{
-  position: fixed;
+
+#btnGithub {
+  float: right;
 }
 
-#btnGithub{
-  right: 1em;  
+#btnMenu {
+  float: left;
 }
 
-#btnGithub a{
+#btnGithub a {
   font-size: 36px;
-  color:#138496;
+  color: #138496;
   vertical-align: top;
 }
 
-#contentppal{
+#contentppal {
   margin-top: 5em;
 }
 
@@ -115,7 +116,7 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-  color:rgb(75, 145, 79);
+  color: rgb(75, 145, 79);
   background: #fff;
 }
 
@@ -133,6 +134,8 @@ a:focus {
   padding: 20px;
   min-height: 100vh;
   transition: all 0.3s;
+  position: relative;
+  width: 100%;
 }
 
 .tab-content {

@@ -12,12 +12,8 @@
             Descripción.<br>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis tempus nibh, sit amet hendrerit justo. Sed
             erat arcu, pellentesque in molestie sed, faucibus id urna. Donec varius mi vel nulla bibendum finibus. In
-            tellus urna, sollicitudin et mi non, interdum varius nunc. Donec mollis velit a ipsum sodales vehicula id
-            vel lectus. Suspendisse vehicula a arcu varius faucibus. Etiam congue malesuada ex vitae pretium. Sed id
-            scelerisque sem. Vestibulum tempor sed dui sed efficitur. In feugiat efficitur mauris, eu feugiat sapien
-            hendrerit nec. Mauris eget leo dolor. Sed ac ullamcorper est, id cursus tellus. Nunc ut varius dui. Etiam
-            aliquam metus et facilisis interdum. Duis suscipit velit quis maximus efficitur. Praesent tincidunt odio at
-            urna cursus, et venenatis felis accumsan.
+            tellus urna.
+            <div id="map" class="m-container"></div>
         </p>
     </div>
     <!-- Tab de Antecedentes -->
@@ -35,3 +31,9 @@
         </p>
     </div>
 </div>
+<script lang="javascript">
+    var mapajs = M.map({
+      'container': 'map',
+      "controls": ["layerswitcher"]
+    });
+</script>
