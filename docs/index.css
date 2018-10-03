@@ -142,6 +142,14 @@ a:focus {
   margin-top: 1em;
 }
 
+#contentppal .tab-content a{
+  color: blue;
+}
+#contentppal .tab-content a:hover{
+  color: blue;
+  text-decoration: underline;
+}
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
