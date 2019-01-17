@@ -2,7 +2,7 @@
 
 <ul class="nav nav-pills">
     <li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#descripcion">Descripción</a></li>
-    <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#apis">APIs</a></li>
+    <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#uso">Uso</a></li>
     <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#ejemplos">Ejemplos</a></li>
 </ul>
 
@@ -28,8 +28,9 @@
 
         </p>
     </div>
-    <!-- Tab de APIs -->
-    <div id="apis" class="tab-pane" role="tabpanel" data-toggle="tab">
+    <!-- Tab de Uso -->
+    <div id="uso" class="tab-pane" role="tabpanel" data-toggle="tab">
+       <p>Existen dos APIs para integrar Mapea:</p>
        <p>> API Javascript: importa la librería y programa tu mapa.</p>
         <div>
             <iframe width="75%" src="//jsfiddle.net/sigcJunta/t8d0safo/embedded/js,html,css/" 
@@ -45,7 +46,7 @@
        
 
     </div>
-    <div id="ejemplos" class="tab-pane" role="tabpanel" data-toggle="tab">
+    <div id="ejemplos" class="tab-pane" role="tabpanel">
            
         <!--<p> Casos de uso </p>-->
 
@@ -58,32 +59,36 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
+                    <p style="text-align:center"><a href="http://www.ideandalucia.es/visor" target="_blank">IDEAVisor</a></p>
                     <img class="d-block w-100" src="./img/visoridea.png" alt="Visor IDEAndalucia">
-                    <div class="carousel-caption d-none d-md-block">
+                    <!--<div class="carousel-caption d-none d-md-block">
                             <h5 style="text-shadow: 0.1em 0.1em 0.2em black">Visor IDEAndalucía</h5>
                             <p style="text-shadow: 0.1em 0.1em 0.2em black">http://www.ideandalucia.es/visor</p>
-                          </div>
+                          </div>-->
               </div>
               <div class="carousel-item">
+                    <p style="text-align:center"><a href="http://www.callejerodeandalucia.es" target="_blank">Callejero Digital de Andalucía</a></p>
                     <img class="d-block w-100" src="./img/cdau.png" alt="Callejero Digital de Andalucía Unificado">
-                    <div class="carousel-caption d-none d-md-block">
+                    <!--<div class="carousel-caption d-none d-md-block">
                         <h5 style="text-shadow: 0.1em 0.1em 0.2em black">Callejero Digital de Andalucía Unificado</h5>
                         <p style="text-shadow: 0.1em 0.1em 0.2em black">http://www.callejerodeandalucia.es</p>
-                    </div>
+                    </div>-->
               </div>
               <div class="carousel-item">
+                <p style="text-align:center"><a href="https://ws040.juntadeandalucia.es/mapafosas" target="_blank">Mapa Fosas</a></p>
                 <img class="d-block w-100" src="./img/mapafosas.png" alt="Mapa Fosas">
-                <div class="carousel-caption d-none d-md-block">
+                <!--<div class="carousel-caption d-none d-md-block">
                     <h5 style="text-shadow: 0.5em 0.1em 0.5em black">Mapa Fosas</h5>
                     <p style="text-shadow: 0.5em 0.1em 0.5em black">https://ws040.juntadeandalucia.es/mapafosas</p>
-                </div>
+                </div>-->
               </div>
               <div class="carousel-item">
+                <p style="text-align:center"><a href="https://ws058.juntadeandalucia.es/mss/centros.jsp" target="_blank">Servicios Sociales</a></p>
                 <img class="d-block w-100" src="./img/centros.png" alt="Centros">
-                <div class="carousel-caption d-none d-md-block">
+                <!--<div class="carousel-caption d-none d-md-block">
                     <h5 style="text-shadow: 0.5em 0.1em 0.5em black">Mapa de Servicios Sociales</h5>
                     <p style="text-shadow: 0.5em 0.1em 0.5em black">https://ws058.juntadeandalucia.es/mss/centros.jsp</p>
-                </div>
+                </div>-->
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselMapea" role="button" data-slide="prev">
@@ -117,7 +122,7 @@
        if (!mapajs){ */
             mapajs = M.map({
                 container: 'divmap',
-                controls: ['layerswitcher','scale','panzoombar','overviewmap'],
+                controls: ['layerswitcher','scale','panzoombar'],
                 wmcfiles: ['https://mapea4-sigc.juntadeandalucia.es/files/wmc/cdau.xml*Callejero','https://mapea4-sigc.juntadeandalucia.es/files/wmc/satelite.xml*Satelite']
             });
         /*}

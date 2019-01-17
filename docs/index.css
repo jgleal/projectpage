@@ -210,8 +210,13 @@ a:focus {
   
 }
 
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
+  position: absolute;
+  top: inherit;
+  left: inherit;
+  right: inherit;
   border-radius: 50%;
   background-color: #3b3737;
 }

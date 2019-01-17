@@ -1,16 +1,74 @@
 <h2>Geoprint</h2>
 
 <ul class="nav nav-pills">
-    <li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#descripcion">Descripción</a></li>
+    <li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#escenario">Escenario</a></li>
+    <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#descripcion">Descripción</a></li>
+    <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#uso">Uso</a></li>
 </ul>
 
 <div class="tab-content">
-    <!-- Tab de Descripcion -->
-    <div id="descripcion" class="tab-pane active" role="tabpanel">
-        <p>
-            En construcción.<br>
-            
+    <!-- Tab de Escenario -->
+    <div id="escenario" class="tab-pane active" role="tabpanel">
+        <p>Una función muy común en los visualizadores de mapas es la de imprimir las capas que se están visualizando, obteniendo una imagen digital del mapa
+            que puede guardarse en el equipo y enviarse a una impresora. La resolución de esa imagen, que es el ancho*alto en píxeles de la misma, afecta 
+            directamente a la calidad con la que luego podrá imprimirse.  
         </p>
+        <p>
+            Esa calidad la relacionamos con el concepto de DPI o puntos por pulgadas, de modo que mientras mayor sea este número, de mayor calidad
+            de impresión estamos hablando. Así, una impresión a 56dpi será bastante inferior en calidad a una de 150dpi.
+        </p>
+        
     </div>
 
+    <!-- Tab de Descripcion -->
+    <div id="descripcion" class="tab-pane" role="tabpanel">
+        <p><b>Geoprint</b> es la instancia centralizada de un servidor <a href="http://mapfish.github.io/mapfish-print-doc/#/overview" target="_blank">Mapfish Print</a> 
+            en la infraestructura del SIGCorporativo, configurada para funcionar con una serie de servicios WMS, ofreciendo opciones y plantillas de impresión 
+            pregeneradas. 
+        </p>
+
+    </div>
+    <!-- Tab de Uso -->
+    <div id="uso" class="tab-pane" role="tabpanel">
+
+            <p>Requisitos de uso para los servidores WMS<br>
+
+             
+            <div id="divmapgeoprint" style="width:75%;box-sizing: unset !important;position: relative;left:12%" class="m-container"></div>
+            
+    
+        </div>
 </div>
+
+<script lang="javascript">
+
+        var mapajs = null;
+        $('.nav-pills a[href="#uso"]').on('shown.bs.tab', function (e) {
+           if (!mapajs){ 
+                mapajs = M.map({
+                    container: 'divmapgeoprint',
+                    controls: ['scale','panzoombar'],
+                    wmcfiles: ['https://mapea4-sigc.juntadeandalucia.es/files/wmc/cdau.xml*Callejero','https://mapea4-sigc.juntadeandalucia.es/files/wmc/satelite.xml*Satelite']
+                });
+                mapajs.addPlugin(new M.plugin.Printer({
+                "params": {
+                    "pages": {
+                    "creditos": "Impresión generada a través de Mapea"
+                    },
+                    "layout": {
+                    "outputFilename": "mapea_${yyyy-MM-dd_hhmmss}"
+                    }
+                },
+                // Pueden establecerse los valores de los desplegables
+                'options': {
+                    'layout': 'imagen apaisada',
+                    'format': 'png',
+                    'dpi': '127'
+                    } 
+                }));
+            }
+        });
+    
+    
+        
+    </script>
