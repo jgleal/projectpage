@@ -29,21 +29,36 @@
         </p>
     </div>
     <!-- Tab de Uso -->
-    <div id="uso" class="tab-pane" role="tabpanel" data-toggle="tab">
-       <p>Existen dos APIs para integrar Mapea:</p>
-       <p>> API Javascript: importa la librería y programa tu mapa.</p>
+    <div id="uso" class="tab-pane" role="tabpanel">
+       <p>Para construir o integrar un visor de mapas con Mapea, haciendo uso de los controles y los plugins ya existentes, existen dos APIs:</p>
+       <ul><li> <b>API Javascript</b> importa la librería y programa tu mapa.</p>
         <div>
             <iframe width="75%" src="//jsfiddle.net/sigcJunta/t8d0safo/embedded/js,html,css/" 
                    frameborder="0"></iframe>
-        </div>
+        </div></li>
 
-        <p>> También puedes llama al API REST para que te genere el mapa como src de un elemento 
-            <b>iframe</b>, o de javascript a través de una <b>función de callback</b>.</p>
+        <li><b>API REST</b> que genera el mapa como src de un elemento 
+            <b>iframe</b>, o como un elemento javascript a través de una <b>función de callback</b>.</p>
         <div>
             <iframe width="75%" src="//jsfiddle.net/sigcJunta/hzrmo3pf/embedded/html,js,css/" 
                    frameborder="0"></iframe>
-        </div>
-       
+        </div></li>
+        </ul>
+
+        <br>
+        <p>Por otro lado, en Mapea se fomenta el concepto de <b>plugin</b>, que no es más que una manera de empaquetar la lógica, utilizando 
+            una estructura bien definida y una serie de clases que garantizan la compatibilidad y homogeneidad de uso. Para facilitar la labor de los 
+            desarrolladores, existe una <a href="https://github.com/sigcorporativo-ja/Mapea4-dev-webpack" target="_blank">herramienta de construcción de 
+            plugins</a>, con una <a href="https://github.com/sigcorporativo-ja/Mapea4-dev-webpack/wiki" target="_blank">wiki propia</a>.</p>
+
+        <p>Respecto a los plugins ya existentes, pueden clasificarse en:
+            <ul>
+                <li>Aquellos que pertenecen al núcleo de Mapea (consulta <a href="https://github.com/sigcorporativo-ja/Mapea4/wiki/Plugins" target="_blank">aquí</a>).</li>
+                <li>Aquellos desarrollados por terceros, en cuyo caso su distribución es independiente. Aquellos subidos a github están centralizados en 
+                    <a href="https://github.com/sigcorporativo-ja/mapea-plugins" target="blank">este repositorio</a>.
+                </li>
+            </ul>
+        </p>
 
     </div>
     <div id="ejemplos" class="tab-pane" role="tabpanel">
