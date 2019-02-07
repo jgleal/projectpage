@@ -12,11 +12,19 @@
         <p>
             <p>
                 Mapea es una librería javascript para la construcción de visualizadores de mapas. 
-                Ofrece una capa de abstracción o <b>fachada</b> colocada sobre una capa de <b>implementación</b> 
-                tecnológica open source, como puede ser Open Layers. 
-            </p> 
-            <p> Dicha fachada pretende ser más simple y estable que la librería subyaciente, minimizando así el 
-                impacto que pueden tener los cambios de la misma sobre sistemas que la usen.
+                Ofrece una capa de abstracción o <b>fachada</b>, colocada sobre una capa de <b>implementación</b> 
+                tecnológica open source, como puede ser Open Layers. Esta fachada:
+                <ul>
+                    <li>Es de uso sencillo y ofrece funcionalidades comunes en la construcción de visualizadores de mapas, tales como: intérprete de contextos de mapas,
+                        filtros alfanuméricos y espaciales para capas vectoriales, o integración con otros servicios del SIGCorporativo (geocodificación, geoprint, etc.), entre otros.
+                    </li>
+                    <li>Énfasis en la retrocompatibilidad y en la estabilidad de la capa de fachada, de modo que nuevas versiones de la librería de mapas subyacientes se van actualizando 
+                        de manera centralizada y transparente al usuario, cuyo visor sigue siendo compatible.
+                    </li>
+                    <li>Posee diseño responsive para su uso desde dispositivos móviles.
+                    </li>
+                </ul>
+                Para conocer en detalle las características funcionales de Mapea, recomendamos visitar la wiki del proyecto en Github:
             </p>
             <p style="text-align: center">
                 <a target="_blank" href="https://github.com/sigcorporativo-ja/Mapea4/wiki" class="btn btn-info btn-lg" 
@@ -30,15 +38,15 @@
     </div>
     <!-- Tab de Uso -->
     <div id="uso" class="tab-pane" role="tabpanel">
-       <p>Para construir o integrar un visor de mapas con Mapea, haciendo uso de los controles y los plugins ya existentes, existen dos APIs:</p>
-       <ul><li> <b>API Javascript</b> importa la librería y programa tu mapa.</p>
+       <p>Para construir o integrar un visor de mapas con Mapea, existen dos opciones en forma de API:</p>
+       <ul><li> <b>API Javascript</b>: importa la librería y programa tu mapa en un div de la página.</p>
         <div>
             <iframe width="75%" src="//jsfiddle.net/sigcJunta/t8d0safo/embedded/js,html,css/" 
                    frameborder="0"></iframe>
         </div></li>
 
-        <li><b>API REST</b> que genera el mapa como src de un elemento 
-            <b>iframe</b>, o como un elemento javascript a través de una <b>función de callback</b>.</p>
+        <li><b>API REST</b>: genera el mapa automáticamente mediante una url, que puede ser fuente de un   
+            <b>iframe</b>, o de un elemento javascript a través de una <b>función de callback</b>.</p>
         <div>
             <iframe width="75%" src="//jsfiddle.net/sigcJunta/hzrmo3pf/embedded/html,js,css/" 
                    frameborder="0"></iframe>
